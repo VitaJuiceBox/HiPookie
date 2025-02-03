@@ -75,7 +75,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header id = "main-header">
         <h1>Will you be my Valentines?</h1>
     </header>
     
@@ -132,11 +132,15 @@
 
         document.getElementById('yesBtn').addEventListener('click', function() {
             var imageElement = document.getElementById('image');
+            var header = document.getElementById('main-header');
             imageElement.src = 'mocha4.png';
             document.getElementById('yesBtn').hidden = true;
             document.getElementById('noBtn').hidden = true;
+            header.textContent = 'REALLY?!?!? YES!!';
+            var headerText = do
             setTimeout(function() {
                 imageElement.src = 'milkmocha_1.png';
+                header.textContent = '❤️❤️🌹 YIPPIE 🌹❤️❤️';
             }, 3000);
         });
     </script>
